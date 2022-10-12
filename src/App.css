@@ -15,14 +15,14 @@ body {
   margin-top: 1em;
 }
 
-.left-panel {
+/* .left-panel {
   float: left;
   width: 200px;
 }
 
 .right-panel {
   margin-left: 210px;
-}
+} */
 
 .ais-InstantSearch {
   max-width: 960px;
