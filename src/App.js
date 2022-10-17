@@ -45,15 +45,22 @@ const App = () => (
 
 const Hit = ({ hit }) => (
   <div key={hit.Index}>
-    <div className="hit-name">
-      <Snippet attribute="Des" hit={hit} /> <div className="hit-info">{hit.HC}</div>
+
+    <div className="hit-title">
+      <span className="hit-title-txt hit-txt">{hit.Des} {hit.AMD ? "" : "[专]"}</span>
+      <span className="hit-headcount">{hit.Sam ? "[同校]" : ""} {hit.HC}</span>
     </div>
-    <div className="hit-info">{hit.Line.Sum}/{hit.Line.Big}/{hit.Line.Sma}</div>
-    <div className="hit-info">{hit.Subject} {hit.Src}</div>
-   
-    <div className="hit-description">
-      <Highlight attribute="School" hit={hit} />
+
+    <div className="hit-school-line hit-txt">
+      <span className="hit-school">{hit.School}</span>
+      <span className="hit-line">{hit.Line.Sum}/{hit.Line.Big}/{hit.Line.Sma}</span>
     </div>
+
+    <div className="hit-labels">
+      {hit.Subject.map(item => (<span key={item.toString()} className="hit-info">{item}</span>))}
+      {hit.Src.map(item => (<span key={item.toString()} className="hit-info">{item}</span>))}
+    </div>
+
   </div>
 );
 

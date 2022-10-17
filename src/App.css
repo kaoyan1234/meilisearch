@@ -15,15 +15,6 @@ body {
   margin-top: 1em;
 }
 
-/* .left-panel {
-  float: left;
-  width: 200px;
-}
-
-.right-panel {
-  margin-left: 210px;
-} */
-
 .ais-InstantSearch {
   max-width: 960px;
   overflow: hidden;
@@ -33,24 +24,78 @@ body {
 .ais-Hits-item {
   margin-bottom: 1em;
   width: calc(50% - 1rem);
+  border-radius: 5px;
 }
 
-.ais-Hits-item img {
-  margin-right: 1em;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 0.5em;
+.hit-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
 }
 
-.hit-name {
-  margin-bottom: 0.5em;
+.hit-title-txt {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  line-height: 25px;
+  padding-right: 20px;
+
 }
 
-.hit-description {
-  color: grey;
-  margin-bottom: 0.5em;
+.hit-txt {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
 }
+
+.hit-school-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.hit-school {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  line-height: 20px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
 
 .hit-info {
-  font-size: 90%;
+  display: inline-block;
+  padding: 3px 7px;
+  font-size: 12px;
+  color: #666;
+  line-height: 17px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  margin-right: 6px;
+  margin-bottom: 5px;
+}
+
+.hit-headcount {
+  color: firebrick;
+  font-size: 18px;
+  line-height: 22px;
+  flex-shrink: 0;
+}
+
+.hit-line {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  line-height: 20px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.hit-labels {
+  display: flex;
+  margin-bottom: 11px;
+  flex-wrap: wrap;
 }
